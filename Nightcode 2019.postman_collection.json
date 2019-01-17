@@ -1,0 +1,662 @@
+{
+	"info": {
+		"_postman_id": "d63bc2fd-b00c-4c45-a529-4a719850e150",
+		"name": "Nightcode 2019",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST message",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-API-Key",
+						"value": "{{API_KEY}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"external_id\": \"ID000001\",\n\t\"content\": \"This is the content of my message\"\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/input/messages",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"input",
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET messages",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/messages/index?team_id={{TEAM_KEY}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"messages",
+						"index"
+					],
+					"query": [
+						{
+							"key": "team_id",
+							"value": "{{TEAM_KEY}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET message by External Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/messages/view/{{MESSAGE_EXTERNAL_ID}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"messages",
+						"view",
+						"{{MESSAGE_EXTERNAL_ID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST pictures",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-API-Key",
+						"type": "text",
+						"value": "{{API_KEY}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"external_id\": \"ID000000001\",\n\t\"picture\": \"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\"\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/input/pictures",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"input",
+						"pictures"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET pictures",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/pictures/index?team_id={{TEAM_KEY}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"pictures",
+						"index"
+					],
+					"query": [
+						{
+							"key": "team_id",
+							"value": "{{TEAM_KEY}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET picture by External Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/pictures/view/{{PICTURE_EXTERNAL_ID}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"pictures",
+						"view",
+						"{{PICTURE_EXTERNAL_ID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Science Datas",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-API-Key",
+						"type": "text",
+						"value": "{{API_KEY}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"external_id\": \"91bb281c-4cdd-4bea-bd9c-27b5f9c75812\",\n    \"datas\": [{\n        \"type\": \"electric-production\",\n        \"unit\": \"kilo-joules\",\n        \"value\": 2.73\n    }, {\n        \"type\": \"temperature\",\n        \"unit\": \"fahrenheit-degrees\",\n        \"value\": 112.0\n    }, {\n        \"type\": \"water\",\n        \"unit\": \"liters\",\n        \"value\": 275.4\n    }, {\n        \"type\": \"poop-weight\",\n        \"unit\": \"kilograms\",\n        \"value\": 3.16\n    }]\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/input/science-datas/add",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"input",
+						"science-datas",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Science Datas (all)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/science-datas/index?team_id={{TEAM_KEY}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"science-datas",
+						"index"
+					],
+					"query": [
+						{
+							"key": "team_id",
+							"value": "{{TEAM_KEY}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Science Datas (by type)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/science-datas/index?team_id={{TEAM_KEY}}&type={{SCIENCE_DATA_TYPE}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"science-datas",
+						"index"
+					],
+					"query": [
+						{
+							"key": "team_id",
+							"value": "{{TEAM_KEY}}"
+						},
+						{
+							"key": "type",
+							"value": "{{SCIENCE_DATA_TYPE}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Science Datas by External Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/science-datas/view/{{SCIENCE_DATA_EXTERNAL_ID}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"science-datas",
+						"view",
+						"{{SCIENCE_DATA_EXTERNAL_ID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST message to mom",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-API-Key",
+						"type": "text",
+						"value": "{{API_KEY}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"external_id\": \"ID000000001\",\n\t\"message\": \"Hello mom ! I'm alive !\"\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/input/moms-messages/add",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"input",
+						"moms-messages",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET messages to mom",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/moms-messages/index?team_id={{TEAM_KEY}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"moms-messages",
+						"index"
+					],
+					"query": [
+						{
+							"key": "team_id",
+							"value": "{{TEAM_KEY}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET message to mom by External Id ",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/moms-messages/view/{{MESSAGE_EXTERNAL_ID}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"moms-messages",
+						"view",
+						"{{MESSAGE_EXTERNAL_ID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST message to Mr Clerentin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-API-Key",
+						"type": "text",
+						"value": "{{API_KEY}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"external_id\": \"ID000000002\",\n\t\"message\": \"Hello Mr Clerentin ! Thank you for allowing us to organize this event in the school !\"\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/input/clerentins-messages/add",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"input",
+						"clerentins-messages",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET messages to Mr Clerentin",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/clerentins-messages/index?team_id={{TEAM_KEY}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"clerentins-messages",
+						"index"
+					],
+					"query": [
+						{
+							"key": "team_id",
+							"value": "{{TEAM_KEY}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET message to Mr Clerentin by External Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/clerentins-messages/view/{{MESSAGE_EXTERNAL_ID}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"clerentins-messages",
+						"view",
+						"{{MESSAGE_EXTERNAL_ID}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "04b043c6-7629-41fc-9b23-3c79ca322cce",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "62b89c56-354a-4e3e-9be7-c6bf62233a32",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "2a368767-ff54-4656-897b-b90b416bbd38",
+			"key": "baseUrl",
+			"value": "http://nightcode-phobos.cleverapps.io/",
+			"type": "string"
+		},
+		{
+			"id": "fe0f86fa-f9ba-4f46-b0dc-e6520bff348a",
+			"key": "API_KEY",
+			"value": "cc8842778736782f48ec0c8f86a77d8e673a3c63aaaf9bd67cb29a2967ab1c96",
+			"type": "string"
+		},
+		{
+			"id": "dcf0e81e-0058-44a5-bd9b-14da1a980148",
+			"key": "TEAM_KEY",
+			"value": "c9b96f32-dbc2-4adf-a7bc-7c53ee5fc1ed",
+			"type": "string"
+		},
+		{
+			"id": "b4816b48-9bd2-4d56-a6fe-12ee853866eb",
+			"key": "MESSAGE_EXTERNAL_ID",
+			"value": "ID000000001",
+			"type": "string"
+		},
+		{
+			"id": "88c6118a-2ce0-4dfd-9937-02714af488d7",
+			"key": "PICTURE_EXTERNAL_ID",
+			"value": "ID000000001",
+			"type": "string"
+		},
+		{
+			"id": "b338d8a5-1979-469a-bd69-df5c466d212c",
+			"key": "SCIENCE_DATA_TYPE",
+			"value": "electric-production",
+			"type": "string"
+		},
+		{
+			"id": "ea0f419a-c5cd-4e8f-98cf-f989e3698a77",
+			"key": "SCIENCE_DATA_EXTERNAL_ID",
+			"value": "ID000000001",
+			"type": "string"
+		}
+	]
+}
