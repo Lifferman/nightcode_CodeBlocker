@@ -15,10 +15,39 @@
 
                 var balise=document.getElementById("test");
                 console.log(response);
-                balise.innerText=rep;
+
 
             });
         });
+        var myRequest2="https://nightcode-phobos.cleverapps.io/api/messages/index.json";
+        fetch(myRequest2).then(function(response2) {
+          return response2.json().then(function(json) {
+              var supere=JSON.stringify(response2);
+              console.log(response2);
+              console.log(supere);
+
+
+          });
+      });
+      var myRequest3="https://nightcode-phobos.cleverapps.io/api/pictures/index.json";
+      fetch(myRequest3).then(function(response3) {
+        return response3.json().then(function(json) {
+
+
+            console.log(response3);
+
+
+        });
+    });
+    var myRequest4="https://nightcode-phobos.cleverapps.io/api/science-datas/index.json";
+    fetch(myRequest4).then(function(response4) {
+      return response4.json().then(function(json) {
+
+          console.log(response4);
+
+
+      });
+  });
     </script>
     <body>
         <header class="menu" >
