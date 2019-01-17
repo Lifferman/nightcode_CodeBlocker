@@ -1,6 +1,17 @@
 <?php
-if(isset($_GET[]))
+
+switch (connection_status())
 {
-  http_response_code(200);
+case CONNECTION_NORMAL:
+  $txt = 'Status code: 200';
+  break;
+case (CONNECTION_ABORTED & CONNECTION_TIMEOUT):
+  $txt = 'Connexion non reussite';
+  break;
+default:
+  $txt = 'Unknown';
+  break;
 }
+//echo $txt;
+echo "status : Ok";
 ?>
