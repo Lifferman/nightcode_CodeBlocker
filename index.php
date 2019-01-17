@@ -1,6 +1,17 @@
+<!DOCTYPE html>
 <html>
-<header><title>This is title</title></header>
+
+<head>
+  <meta charset="utf-8">
+    <title>Front</title>
+</head>
+
 <body>
-Hello world
+    <div id="main">
+      <p>Vous êtes bien sur le front</p>
+
+    </div>
+
 </body>
+
 </html>
