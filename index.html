@@ -8,43 +8,47 @@
 		<link rel="stylesheet" type="text/css" href="style.css" />
     </head>
     <script>
+
+
           var myRequest="https://nightcode-phobos.cleverapps.io/api/messages.json";
           fetch(myRequest).then(function(response) {
-            return response.json().then(function(json) {
-                //var rep=JSON.parse(response);
+            return response.json().then(function(data) {
+              console.log(data);
 
-                var balise=document.getElementById("test");
-                console.log(response);
-
-
-            });
+              for(var i=0;i<data.data.length;i++){
+                  console.log(data.data[i].content);
+              }
+      });
         });
         var myRequest2="https://nightcode-phobos.cleverapps.io/api/messages/index.json";
         fetch(myRequest2).then(function(response2) {
-          return response2.json().then(function(json) {
-              var supere=JSON.stringify(response2);
-              console.log(response2);
-              console.log(supere);
-
+          return response2.json().then(function(data) {
+            console.log(data);
+            for(var i=0;i<data.data.length;i++){
+                console.log(data.data[i].content);
+            }
 
           });
       });
       var myRequest3="https://nightcode-phobos.cleverapps.io/api/pictures/index.json";
       fetch(myRequest3).then(function(response3) {
-        return response3.json().then(function(json) {
+        return response3.json().then(function(data) {
 
-
-            console.log(response3);
-
+          console.log(data);
+          for(var i=0;i<data.data.length;i++){
+              console.log(data.data[i].picture);
+          }
 
         });
     });
     var myRequest4="https://nightcode-phobos.cleverapps.io/api/science-datas/index.json";
     fetch(myRequest4).then(function(response4) {
-      return response4.json().then(function(json) {
+      return response4.json().then(function(data) {
 
-          console.log(response4);
-
+        console.log(data);
+        for(var i=0;i<data.data.length;i++){
+            console.log(data.data[i].type);
+        }
 
       });
   });
