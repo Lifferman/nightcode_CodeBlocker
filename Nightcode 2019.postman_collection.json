@@ -23,7 +23,7 @@
 					},
 					{
 						"key": "X-API-Key",
-						"value": "{{API_KEY}}",
+						"value": "3ddeebbed1454b1782f269d6873763a95adf2b77298cdaa5b6d84b7ebe8e468e",
 						"type": "text"
 					}
 				],
@@ -60,7 +60,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "{{baseUrl}}/api/messages/index?team_id={{TEAM_KEY}}",
+					"raw": "{{baseUrl}}/api/messages/index?team_id=48390be8-9bcc-4744-939d-df6ce3628d92",
 					"host": [
 						"{{baseUrl}}"
 					],
@@ -72,7 +72,7 @@
 					"query": [
 						{
 							"key": "team_id",
-							"value": "{{TEAM_KEY}}"
+							"value": "48390be8-9bcc-4744-939d-df6ce3628d92"
 						}
 					]
 				}
@@ -133,7 +133,7 @@
 					{
 						"key": "X-API-Key",
 						"type": "text",
-						"value": "{{API_KEY}}"
+						"value": "3ddeebbed1454b1782f269d6873763a95adf2b77298cdaa5b6d84b7ebe8e468e"
 					}
 				],
 				"body": {
@@ -169,7 +169,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "{{baseUrl}}/api/pictures/index?team_id={{TEAM_KEY}}",
+					"raw": "{{baseUrl}}/api/pictures/index?team_id=48390be8-9bcc-4744-939d-df6ce3628d92",
 					"host": [
 						"{{baseUrl}}"
 					],
@@ -181,7 +181,7 @@
 					"query": [
 						{
 							"key": "team_id",
-							"value": "{{TEAM_KEY}}"
+							"value": "48390be8-9bcc-4744-939d-df6ce3628d92"
 						}
 					]
 				}
@@ -242,7 +242,7 @@
 					{
 						"key": "X-API-Key",
 						"type": "text",
-						"value": "{{API_KEY}}"
+						"value": "3ddeebbed1454b1782f269d6873763a95adf2b77298cdaa5b6d84b7ebe8e468e"
 					}
 				],
 				"body": {
@@ -279,7 +279,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "{{baseUrl}}/api/science-datas/index?team_id={{TEAM_KEY}}",
+					"raw": "{{baseUrl}}/api/science-datas/index?team_id=48390be8-9bcc-4744-939d-df6ce3628d92",
 					"host": [
 						"{{baseUrl}}"
 					],
@@ -291,7 +291,7 @@
 					"query": [
 						{
 							"key": "team_id",
-							"value": "{{TEAM_KEY}}"
+							"value": "48390be8-9bcc-4744-939d-df6ce3628d92"
 						}
 					]
 				}
@@ -314,7 +314,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "{{baseUrl}}/api/science-datas/index?team_id={{TEAM_KEY}}&type={{SCIENCE_DATA_TYPE}}",
+					"raw": "{{baseUrl}}/api/science-datas/index?team_id=48390be8-9bcc-4744-939d-df6ce3628d92&type={{SCIENCE_DATA_TYPE}}",
 					"host": [
 						"{{baseUrl}}"
 					],
@@ -326,7 +326,7 @@
 					"query": [
 						{
 							"key": "team_id",
-							"value": "{{TEAM_KEY}}"
+							"value": "48390be8-9bcc-4744-939d-df6ce3628d92"
 						},
 						{
 							"key": "type",
@@ -391,7 +391,7 @@
 					{
 						"key": "X-API-Key",
 						"type": "text",
-						"value": "{{API_KEY}}"
+						"value": "3ddeebbed1454b1782f269d6873763a95adf2b77298cdaa5b6d84b7ebe8e468e"
 					}
 				],
 				"body": {
@@ -428,7 +428,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "{{baseUrl}}/api/moms-messages/index?team_id={{TEAM_KEY}}",
+					"raw": "{{baseUrl}}/api/moms-messages/index?team_id=48390be8-9bcc-4744-939d-df6ce3628d92",
 					"host": [
 						"{{baseUrl}}"
 					],
@@ -440,7 +440,7 @@
 					"query": [
 						{
 							"key": "team_id",
-							"value": "{{TEAM_KEY}}"
+							"value": "48390be8-9bcc-4744-939d-df6ce3628d92"
 						}
 					]
 				}
@@ -501,7 +501,7 @@
 					{
 						"key": "X-API-Key",
 						"type": "text",
-						"value": "{{API_KEY}}"
+						"value": "3ddeebbed1454b1782f269d6873763a95adf2b77298cdaa5b6d84b7ebe8e468e"
 					}
 				],
 				"body": {
@@ -538,7 +538,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "{{baseUrl}}/api/clerentins-messages/index?team_id={{TEAM_KEY}}",
+					"raw": "{{baseUrl}}/api/clerentins-messages/index?team_id=48390be8-9bcc-4744-939d-df6ce3628d92",
 					"host": [
 						"{{baseUrl}}"
 					],
@@ -550,7 +550,7 @@
 					"query": [
 						{
 							"key": "team_id",
-							"value": "{{TEAM_KEY}}"
+							"value": "48390be8-9bcc-4744-939d-df6ce3628d92"
 						}
 					]
 				}
