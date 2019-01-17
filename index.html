@@ -7,7 +7,19 @@
 		<link rel="stylesheet" type="text/css" href="simplegrid.css" />
 		<link rel="stylesheet" type="text/css" href="style.css" />
     </head>
+    <script>
+          var myRequest="https://nightcode-phobos.cleverapps.io/api/messages.json";
+          fetch(myRequest).then(function(response) {
+            return response.json().then(function(json) {
+                //var rep=JSON.parse(response);
 
+                var balise=document.getElementById("test");
+                console.log(response);
+                balise.innerText=rep;
+
+            });
+        });
+    </script>
     <body>
         <header class="menu" >
 			<div class="grid grid-pad menu">
@@ -27,7 +39,7 @@
 							</header>
 							<section class="font_article">
 								<div class="col-1-2 font_article">
-									<p>Succes:</p>
+									<p id="test">Succes:</p>
                   <p>Data:</p>
                   <p>External_id:</p>
                   <p>Content:</p>
