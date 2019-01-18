@@ -1,0 +1,6 @@
+{
+    "require": {
+        "php-http/guzzle5-adapter": "^0.6.0",
+        "guzzlehttp/guzzle": "^5.3"
+    }
+}
