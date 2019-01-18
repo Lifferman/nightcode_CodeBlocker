@@ -12,5 +12,17 @@ $uuid = "uuid";
 $msg = "msg";
 
 if(isset($payload,$input,$uuid,$msg)){
-  echo json_encode(array('status' => 'Ok'), JSON_NUMERIC_CHECK);
+  redirection200ok();
+}else {
+  redirectionErreur400();
 }
+function redirectionErreur404()
+  {
+    header('HTTP/1.0 400');
+    exit;
+  }
+  function redirection200ok()
+    {
+      header('HTTP/1.0 200 Ok');
+      exit;
+    }
