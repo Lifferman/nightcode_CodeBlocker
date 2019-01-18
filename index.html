@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Le meilleur sites de fruits</title>
+        <title>CODE BLOCKER POWA</title>
         <meta charset='utf-8' />
 		<link rel="stylesheet" type="text/css" href="restcss.css" />
 		<link rel="stylesheet" type="text/css" href="simplegrid.css" />
@@ -18,8 +18,8 @@
               for(var i=0;i<data.data.length;i++){
                   console.log(data.data[i].content);
               }
-      });
-        });
+          });
+            });
         var myRequest2="https://nightcode-phobos.cleverapps.io/api/messages/index.json";
         fetch(myRequest2).then(function(response2) {
           return response2.json().then(function(data) {
@@ -52,6 +52,30 @@
 
       });
   });
+
+
+  var myRequest5="https://nightcode-phobos.cleverapps.io/api//api/moms-messages/index.json";
+  fetch(myRequest5).then(function(response5) {
+    return response5.json().then(function(data) {
+
+      console.log(data);
+      for(var i=0;i<data.data.length;i++){
+          console.log(data.data[i].content);
+      }
+
+    });
+});
+var myRequest6="https://nightcode-phobos.cleverapps.io/api/clerentins-messages/index.json";
+fetch(myRequest6).then(function(response6) {
+  return response6.json().then(function(data) {
+
+    console.log(data);
+    for(var i=0;i<data.data.length;i++){
+        console.log(data.data[i].type);
+    }
+
+  });
+});
     </script>
     <body>
         <header class="menu" >
