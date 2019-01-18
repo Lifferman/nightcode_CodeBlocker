@@ -10,22 +10,22 @@
     <script>
 
 
-          var myRequest="https://nightcode-phobos.cleverapps.io/api/messages.json";
-          fetch(myRequest).then(function(response) {
-            return response.json().then(function(data) {
-              console.log(data);
-
-              for(var i=0;i<data.data.length;i++){
-                  console.log(data.data[i].content);
-              }
-          });
-            });
         var myRequest2="https://nightcode-phobos.cleverapps.io/api/messages/index.json";
         fetch(myRequest2).then(function(response2) {
           return response2.json().then(function(data) {
             console.log(data);
+            var baliseIter = document.createElement("h3");
+            var myText = document.createTextNode("messages index:");
+            baliseIter.appendChild(myText);
+            document.body.appendChild(baliseIter);
+
             for(var i=0;i<data.data.length;i++){
                 console.log(data.data[i].content);
+                var baliseIter = document.createElement("p");
+                var myText = document.createTextNode(data.data[i].content);
+                baliseIter.appendChild(myText);
+                document.body.appendChild(baliseIter);
+
             }
 
           });
@@ -35,8 +35,19 @@
         return response3.json().then(function(data) {
 
           console.log(data);
+          var baliseIter = document.createElement("h3");
+          var myText = document.createTextNode("picture:");
+          baliseIter.appendChild(myText);
+          document.body.appendChild(baliseIter);
+
           for(var i=0;i<data.data.length;i++){
               console.log(data.data[i].picture);
+              /*var balisePicSave = document.createElement("p");
+              var myText = document.createTextNode(data.data[i].picture);
+              baliseIter.appendChild(myText);
+              document.body.appendChild(baliseIter);*/
+
+
           }
 
         });
@@ -46,21 +57,45 @@
       return response4.json().then(function(data) {
 
         console.log(data);
+        var baliseIter = document.createElement("h3");
+        var myText = document.createTextNode("type de données:");
+        baliseIter.appendChild(myText);
+        document.body.appendChild(baliseIter);
+
         for(var i=0;i<data.data.length;i++){
             console.log(data.data[i].type);
+            var baliseIter = document.createElement("p");
+            var myText = document.createTextNode(data.data[i].type)
+            var txt2=document.createTextNode(data.data[i].value);
+            var txt3=document.createTextNode(data.data[i].unit);
+            baliseIter.appendChild(myText);
+
+            baliseIter.appendChild(txt2);
+            baliseIter.appendChild(txt3);
+            document.body.appendChild(baliseIter);
         }
 
       });
   });
 
 
-  var myRequest5="https://nightcode-phobos.cleverapps.io/api//api/moms-messages/index.json";
+  var myRequest5="https://nightcode-phobos.cleverapps.io/api/moms-messages/index.json";
   fetch(myRequest5).then(function(response5) {
     return response5.json().then(function(data) {
 
       console.log(data);
+      var baliseIter = document.createElement("h3");
+      var myText = document.createTextNode("messages maman:");
+      baliseIter.appendChild(myText);
+      document.body.appendChild(baliseIter);
+
       for(var i=0;i<data.data.length;i++){
-          console.log(data.data[i].content);
+          console.log(data.data[i].message);
+          var baliseIter = document.createElement("p");
+          var myText = document.createTextNode(data.data[i].message);
+          baliseIter.appendChild(myText);
+          document.body.appendChild(baliseIter);
+
       }
 
     });
@@ -70,13 +105,37 @@ fetch(myRequest6).then(function(response6) {
   return response6.json().then(function(data) {
 
     console.log(data);
+    var baliseIter = document.createElement("h3");
+    var myText = document.createTextNode("messages clecle:");
+    baliseIter.appendChild(myText);
+    document.body.appendChild(baliseIter);
     for(var i=0;i<data.data.length;i++){
-        console.log(data.data[i].type);
+        console.log(data.data[i].message);
+        var baliseIter = document.createElement("p");
+        var myText = document.createTextNode(data.data[i].message);
+        baliseIter.appendChild(myText);
+        document.body.appendChild(baliseIter);
     }
 
   });
 });
     </script>
+    <?php
+    $data = $yo;
+      $data = base64_decode($data);
+
+      $im = imagecreatefromstring($data);
+      if ($im !== false) {
+        echo "ça marche gros";
+        header('Content-Type: image/png');
+        imagepng($im);
+        imagedestroy($im);
+      }
+      else {
+        echo 'An error occurred.';
+      }
+
+    ?>
     <body>
         <header class="menu" >
 			<div class="grid grid-pad menu">
@@ -107,6 +166,8 @@ fetch(myRequest6).then(function(response6) {
 				</div>
         </main>
 		<div class="grid grid-pad">
+
+
 			<div class="col-1-1">
 				<footer>
 					<p>NightCode 2019</p>
